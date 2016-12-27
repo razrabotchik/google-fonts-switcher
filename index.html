@@ -1,0 +1,21 @@
+<html ng-app="app" ng-controller="MainController as vm" ng-init="vm.init()">
+<head>
+    <title>{{ vm.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+
+<ng-view></ng-view>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js "></script>
+
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/app.routes.js"></script>
+<script type="text/javascript" src="app/services/fonts.service.js"></script>
+<script type="text/javascript" src="app/services/googleApiKey.service.js"></script>
+<script type="text/javascript" src="app/controllers/main.controller.js"></script>
+<script type="text/javascript" src="app/controllers/fonts.controller.js"></script>
+
+</body>
+</html>
