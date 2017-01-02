@@ -1,0 +1,4 @@
+.dialog-selected-font {background-color: #eee; border-color: #aaa; }
+.dialog-font-name {font-size: 11px; color: #aaa; max-height: 14px; overflow: hidden; }
+.dialog-font-caption { font-size: 50px; }
+.dialog-font-container { border: 1px solid #eee;text-align: center; }

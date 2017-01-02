@@ -1,0 +1,51 @@
+<md-dialog aria-label="Choose font">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Fonts</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div ng-cloak>
+                    <md-content>
+                        <md-tabs md-dynamic-height md-border-bottom>
+                            <md-tab label="Google">
+                                <md-content class="md-padding">
+                                    <div layout="row" layout-wrap>
+                                        <div flex="25" ng-repeat="font in vm.fonts_to_show"
+                                             class="dialog-font-container"
+                                             ng-class="{'dialog-selected-font' : font == vm.current_font}"
+                                                ng-click="vm.select(font)"
+                                            >
+                                            <div class="font">
+                                                <div class="dialog-font-caption"
+                                                     ng-style="{'font-family' : font.family }">Ag</div>
+                                                <div class="dialog-font-name">{{ font.family }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <md-slider-container>
+                                        <span>Page</span>
+                                        <md-slider flex ng-model="vm.page" min="1" max="{{ vm.fonts.length / vm.limit }}" aria-label="page"
+                                                   id="dialog-pagination-slider" class="md-accent">
+                                        </md-slider>
+                                        <md-input-container>
+                                            <input flex type="number" ng-model="vm.page" aria-label="green" aria-controls="dialog-pagination-slider">
+                                        </md-input-container>
+                                    </md-slider-container>
+                                </md-content>
+                            </md-tab>
+                        </md-tabs>
+                    </md-content>
+                </div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="vm.cancel()">Cancel</md-button>
+            <md-button ng-click="vm.save()" class="md-primary">Save</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
